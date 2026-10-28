@@ -10,7 +10,7 @@
 
 ```text
 frontend code
-  SD page.html       Software Development page
+  index.html       Software Development page
   STEM page.html     STEM Workshops page
   nav.html           Shared responsive navigation
   footer.html        Shared contact and links footer
