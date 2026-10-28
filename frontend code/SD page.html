@@ -1,37 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Debug Lab</title>
-        
-        <script src="https://cdn.tailwindcss.com"></script>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-        
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div id="header"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development | Debug Lab</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans pt-20">
+    <div id="header"></div>
 
-        <section>
+    <main>
 
+        <!-- Hero Section -->
+        <section class="bg-[#1A1D23] text-white py-24 px-6 relative overflow-hidden">
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div class="hero-copy md:w-1/2 text-left">
+                    <div class="text-[rgb(255,107,0)] font-black uppercase text-xs tracking-widest mb-4">
+                        Building Tomorrow's Innovators
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+                        Software <br>
+                        <span class="text-[rgb(255,107,0)]">Development</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        Empower your child to transition from a technology consumer to a technology creator. Our software tracks teach foundational logic, advanced syntax and real-world coding skills.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#tracks" class="bg-[rgb(255,107,0)] hover:bg-[rgb(255,107,0,0.8)] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-md active:scale-95 text-sm">
+                            Explore Tracks
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual md:w-1/2 w-full">
+                    <div class="bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center p-8">
+                        <img src="../img/software development.jpeg" alt="Software Development" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <div id="footer"></div>
+        <!-- Benefits of Coding Section -->
+        <section class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-black text-[#1A1D23] leading-tight mb-4">
+                        At Debug Lab, we empower students to <span class="text-purple-500">design</span>, <span class="text-green-500">build</span> and become visionary leaders in <span class="text-red-500">technology.</span>
+                    </h2>
+                </div>
 
-        <script>
-            function loadComponent(elementId, fileUrl) {
-                fetch(fileUrl)
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById(elementId).innerHTML = data;
-                    })
-                    .catch(error => console.error('Error loading ' + fileUrl, error));
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <!-- Left Side: Image Placeholder -->
+                    <div class="lg:w-1/2 w-full">
+                        <img src="../img/learning-pathway.jpeg" alt="Learning Pathway Graphic" class="w-full max-w-md mx-auto rounded-3xl shadow-lg border border-gray-200">
+                    </div>
+                    
+                    <!-- Right Side: Text Points -->
+                    <div class="lg:w-1/2 w-full space-y-10">
+                        <div class="flex gap-6 items-start">
+                            <span class="material-symbols-outlined text-4xl text-[#1A1D23] shrink-0">handshake</span>
+                            <p class="text-lg text-gray-700 font-medium leading-relaxed">
+                                Tailored <strong class="text-[#1A1D23] font-black">for ages 5-17</strong>, our curriculum welcomes absolute beginners and advanced learners alike, ensuring every student thrives under the mentorship of industry-experienced coaches.
+                            </p>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="material-symbols-outlined text-4xl text-[#1A1D23] shrink-0">computer</span>
+                            <p class="text-lg text-gray-700 font-medium leading-relaxed">
+                                Move beyond passive screen time. Our interactive sessions encourage collaboration, allowing students to engineer and <strong class="text-[#1A1D23] font-black">launch their very own digital products</strong> and physical prototypes.
+                            </p>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <span class="material-symbols-outlined text-4xl text-[#1A1D23] shrink-0">star</span>
+                            <p class="text-lg text-gray-700 font-medium leading-relaxed">
+                                We regularly attend thrilling hackathons and tech showcases, giving students the platform to <strong class="text-[#1A1D23] font-black">test their skills, build a robust portfolio,</strong> and celebrate their technological milestones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Cards Section -->
+        <section id="tracks" class="py-24 px-6 max-w-7xl  mx-auto bg-white border-t border-gray-100">
+            <div class="text-center mb-16">
+                <h3 class="text-[rgb(255,107,0)] font-black uppercase text-xs tracking-widest mb-4">Programs</h3>
+                <h2 class="text-3xl md:text-4xl font-black text-[#1A1D23]">
+                    Our Education <span class="text-[rgb(255,107,0)]">Tracks</span>
+                </h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Tailored programs designed for every age and skill level. Kids learn by building real projects at their own pace.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[rgba(255,107,0,0.4)] hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 w-full overflow-hidden bg-gray-100">
+                        <img src="../img/game dev.jpg" alt="Game Development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-[rgb(255,107,0)] text-white text-xs font-black px-3 py-1.5 rounded uppercase tracking-widest shadow-md">
+                            Ages 6-12
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-black text-[#1A1D23] mb-3">Game Development</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Dive into coding, design and storytelling as you craft your own digital adventures. Join us and turn your passion for gaming into a rewarding skillset.
+                        </p>
+                        <div class="pt-5 border-t border-gray-100 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">Scratch</span>
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">Logic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[rgba(255,107,0,0.4)] hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 w-full overflow-hidden bg-gray-100">
+                        <img src="../img/cs.jpg" alt="CS Fundamentals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-[rgb(255,107,0)] text-white text-xs font-black px-3 py-1.5 rounded uppercase tracking-widest shadow-md">
+                            Ages 8-14
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-black text-[#1A1D23] mb-3">CS Fundamentals Skills</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Discover how to program a computer through coding by creating games and interactive stories and become an expert in a programming language.
+                        </p>
+                        <div class="pt-5 border-t border-gray-100 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">Algorithms</span>
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">Block Coding</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[rgba(255,107,0,0.4)] hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 w-full overflow-hidden bg-gray-100">
+                        <img src="../img/web.jpeg" alt="Web Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-[rgb(255,107,0)] text-white text-xs font-black px-3 py-1.5 rounded uppercase tracking-widest shadow-md">
+                            Ages 6-12
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-black text-[#1A1D23] mb-3">Web Design</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Learn to craft stunning, user-friendly websites from scratch. From layout to coding, we'll equip you with the skills to bring your digital visions to life.
+                        </p>
+                        <div class="pt-5 border-t border-gray-100 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[rgba(255,107,0,0.4)] hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 w-full overflow-hidden bg-gray-100">
+                        <img src="../img/coding.jpeg" alt="JavaScript Coding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-[rgb(255,107,0)] text-white text-xs font-black px-3 py-1.5 rounded uppercase tracking-widest shadow-md">
+                            Ages 10-16
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-black text-[#1A1D23] mb-3">Coding</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Our course combines JavaScript from Beginner to Advanced Level that covered the industrial standards. Learn practical skills for tomorrow's tech world.
+                        </p>
+                        <div class="pt-5 border-t border-gray-100 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">Web Apps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[rgba(255,107,0,0.4)] hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 w-full overflow-hidden bg-gray-100">
+                        <img src="../img/3D.jpg" alt="3D Printing & Modelling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-[rgb(255,107,0)] text-white text-xs font-black px-3 py-1.5 rounded uppercase tracking-widest shadow-md">
+                            Ages 6-12
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-black text-[#1A1D23] mb-3">3D Printing & Modelling</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                            A great way to introduce children to the creation of prototypes in technology and engineering and improve their problem-solving skills.
+                        </p>
+                        <div class="pt-5 border-t border-gray-100 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">Prototyping</span>
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[rgba(255,107,0,0.4)] hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative h-56 w-full overflow-hidden bg-gray-100">
+                        <img src="../img/AR&VR.jpg" alt="AR & VR Technology" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-[rgb(255,107,0)] text-white text-xs font-black px-3 py-1.5 rounded uppercase tracking-widest shadow-md">
+                            Ages 6-12
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-black text-[#1A1D23] mb-3">AR & VR Technology</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Embark on a journey into alternate realities with our AR & VR course. From gaming to education, discover the boundless applications of immersive technology.
+                        </p>
+                        <div class="pt-5 border-t border-gray-100 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">Immersive Tech</span>
+                            <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-md text-xs font-bold text-gray-500">3D Space</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Benefits of Coding Section -->
+        <section class="py-24 px-6 bg-white border-t border-gray-100">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-3xl md:text-5xl font-black text-[#1A1D23] mb-6 leading-tight">
+                    The Power of Early <br>Tech Education
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed">
+                    Equipping your child with coding skills does more than teach them how to program—it wires their brain for critical thinking, resilience and lifelong innovation in an ever-changing world.
+                </p>
+
+                <!-- 3 Visual Columns -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Benefit 1 -->
+                    <div class="rounded-[2rem] overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- Standardized Image Container -->
+                        <div class="bg-[#F8D25E] h-64 flex items-center justify-center relative overflow-hidden">
+                            <img src="../img/Cultivate Analytical Thinking.jpg" alt="Cultivate Analytical Thinking" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-[#F6C243] p-6 text-center">
+                            <h4 class="text-white text-xl font-black">Cultivate Analytical Thinking</h4>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefit 2 -->
+                    <div class="rounded-[2rem] overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- Standardized Image Container -->
+                        <div class="bg-[#F391A0] h-64 flex items-center justify-center relative overflow-hidden">
+                            <img src="../img/Spark Creative Confidence.jpg" alt="Spark Creative Confidence" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-[#EE6C81] p-6 text-center">
+                            <h4 class="text-white text-xl font-black">Spark Creative Confidence</h4>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="rounded-[2rem] overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- Standardized Image Container -->
+                        <div class="bg-[#99C2FF] h-64 flex items-center justify-center relative overflow-hidden">
+                            <img src="../img/Unlock Future Opportunities.jpeg" alt="Unlock Future Opportunities" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-[#7AAFFF] p-6 text-center">
+                            <h4 class="text-white text-xl font-black">Unlock Future Opportunities</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="trial" class="max-w-7xl mx-auto px-6 py-20">
+            <div class="bg-[rgb(255,107,0)] rounded-[2.5rem] p-10 lg:p-20 relative overflow-hidden flex flex-col items-center text-center shadow-2xl shadow-[rgb(255,107,0)]/30">
+
+                <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+                <h2 class="text-3xl lg:text-5xl font-black text-white mb-6 relative z-10 leading-tight">
+                    Sign Up for Our Trial Class & Let's Code!
+                </h2>
+                <p class="text-white/90 text-lg font-medium mb-10 max-w-2xl relative z-10">
+                    Join the next generation of software engineers. Book a free trial to see if our coding tracks are the right fit for your child, or reach out if you have any questions.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10 w-full">
+                    <a href="#contact" class="flex items-center justify-center gap-2 h-16 px-10 bg-[#1A1D23] text-white font-black rounded-xl hover:bg-black transition-colors shadow-lg uppercase tracking-tighter">
+                        Book a Free Trial
+                    </a>
+                    <a href="mailto:debuglab.coach@gmail.com" class="flex items-center justify-center gap-2 h-16 px-10 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-black rounded-xl transition-colors shadow-lg uppercase tracking-tighter">
+                        <span class="material-symbols-outlined text-xl">chat</span>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Reusable Footer -->
+    <div id="footer"></div>
+
+    <script>
+        async function loadComponent(elementId, fileUrl) {
+            const target = document.getElementById(elementId);
+            if (!target) {
+                throw new Error(`Missing component container: ${elementId}`);
             }
 
-            loadComponent('header', 'nav.html');
-            loadComponent('footer', 'footer.html');
-        </script>
-    </body>
+            const response = await fetch(fileUrl);
+            if (!response.ok) {
+                throw new Error(`Could not load ${fileUrl}: ${response.status}`);
+            }
+
+            target.innerHTML = await response.text();
+        }
+
+        Promise.all([
+            loadComponent('header', 'nav.html'),
+            loadComponent('footer', 'footer.html')
+        ]).catch(error => console.error('Could not load page components.', error));
+    </script>
+</body>
 </html>
