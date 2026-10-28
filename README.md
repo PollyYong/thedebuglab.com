@@ -9,13 +9,13 @@
 ## Project layout
 
 ```text
-frontend code/
+frontend code
   SD page.html       Software Development page
   STEM page.html     STEM Workshops page
   nav.html           Shared responsive navigation
   footer.html        Shared contact and links footer
   styles.css         Shared animation styles
-img/                 Page imagery
+img                 Page imagery
 ```
 
 ## Key decisions and assumptions
