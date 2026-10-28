@@ -1,6 +1,6 @@
 <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-    <img src="img/logo.png" alt="Logo" class="h-16 w-auto">
+    <img src="../img/logo.png" alt="Logo" class="h-16 w-auto">
     <nav class="hidden md:flex items-center gap-8 h-full">
       <div class="relative group h-full flex items-center">
         <a class="text-sm font-bold text-neutral-dark transition-colors flex items-center gap-1 group-hover:text-[rgb(255,107,0)]" href="#">
@@ -9,7 +9,6 @@
         </a>
 
         <div class="nav-dropdown absolute top-[75px] left-0 w-80 bg-white rounded-[2rem] shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50 p-4 transition-all duration-200">
-
           <a class="flex items-center gap-4 px-5 py-4 rounded-2xl group/item transition-colors hover:bg-[rgba(255,107,0,0.08)]" href="#">
             <div class="size-12 rounded-2xl flex items-center justify-center transition-all bg-[rgba(255,107,0,0.08)] text-[rgb(255,107,0)] group-hover/item:bg-[rgb(255,107,0)] group-hover/item:text-white">
               <span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
@@ -18,7 +17,6 @@
               <span class="text-base font-bold text-neutral-dark group-hover/item:text-[rgb(255,107,0)] transition-colors">Holiday Workshop</span>
             </div>
           </a>
-
           <a class="flex items-center gap-4 px-5 py-4 rounded-2xl group/item transition-colors hover:bg-[rgba(255,107,0,0.08)]" href="#">
             <div class="size-12 rounded-2xl flex items-center justify-center transition-all bg-[rgba(255,107,0,0.08)] text-[rgb(255,107,0)] group-hover/item:bg-[rgb(255,107,0)] group-hover/item:text-white">
               <span class="material-symbols-outlined text-2xl">code</span>
@@ -27,7 +25,6 @@
               <span class="text-base font-bold text-neutral-dark group-hover/item:text-[rgb(255,107,0)] transition-colors">Software Development</span>
             </div>
           </a>
-
           <a class="flex items-center gap-4 px-5 py-4 rounded-2xl group/item transition-colors hover:bg-[rgba(255,107,0,0.08)]" href="#">
             <div class="size-12 rounded-2xl flex items-center justify-center transition-all bg-[rgba(255,107,0,0.08)] text-[rgb(255,107,0)] group-hover/item:bg-[rgb(255,107,0)] group-hover/item:text-white">
               <span class="material-symbols-outlined text-2xl">science</span>
@@ -37,18 +34,48 @@
             </div>
           </a>
         </div>
+        
       </div>
-      <p class="text-sm font-bold text-neutral-dark hover:text-primary transition-colors">Events</p>
-      <p class="text-sm font-bold text-neutral-dark hover:text-primary transition-colors">Marketplace</p>
-      <p class="text-sm font-bold text-neutral-dark hover:text-primary transition-colors">Wall of Fame</p>
-      <p class="text-sm font-bold text-neutral-dark hover:text-primary transition-colors">Leaderboard</p>
+
+      <div class="relative group h-full flex items-center">
+        <a class="text-sm font-bold text-neutral-dark transition-colors flex items-center gap-1 group-hover:text-[rgb(255,107,0)]" href="#">
+          Events
+          <span class="material-symbols-outlined text-[18px] transition-transform group-hover:rotate-180">expand_more</span>
+        </a>
+
+        <div class="nav-dropdown absolute top-[75px] left-0 w-80 bg-white rounded-[2rem] shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50 p-4 transition-all duration-200">
+          <a class="flex items-center gap-4 px-5 py-4 rounded-2xl group/item transition-colors hover:bg-[rgba(255,107,0,0.08)]" href="#">
+            <div class="size-12 rounded-2xl flex items-center justify-center transition-all bg-[rgba(255,107,0,0.08)] text-[rgb(255,107,0)] group-hover/item:bg-[rgb(255,107,0)] group-hover/item:text-white">
+              <span class="material-symbols-outlined text-2xl">calendar_month</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-base font-bold text-neutral-dark group-hover/item:text-[rgb(255,107,0)] transition-colors">Upcoming Events</span>
+            </div>
+          </a>
+          <a class="flex items-center gap-4 px-5 py-4 rounded-2xl group/item transition-colors hover:bg-[rgba(255,107,0,0.08)]" href="#">
+            <div class="size-12 rounded-2xl flex items-center justify-center transition-all bg-[rgba(255,107,0,0.08)] text-[rgb(255,107,0)] group-hover/item:bg-[rgb(255,107,0)] group-hover/item:text-white">
+              <span class="material-symbols-outlined text-2xl">trophy</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-base font-bold text-neutral-dark group-hover/item:text-[rgb(255,107,0)] transition-colors">Competitions</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <a class="text-sm font-bold text-neutral-dark transition-colors flex items-center gap-1 hover:text-[rgb(255,107,0)]" href="#">Marketplaces</a>
+      <a class="text-sm font-bold text-neutral-dark transition-colors flex items-center gap-1 hover:text-[rgb(255,107,0)]" href="#">Wall of Fame</a>
+      <a class="text-sm font-bold text-neutral-dark transition-colors flex items-center gap-1 hover:text-[rgb(255,107,0)]" href="#">Leaderboard</a>
     </nav>
+
     <div class="flex items-center gap-4">
-      <button class="hidden sm:block text-sm font-bold text-neutral-dark px-4 hover:text-primary transition-colors">Coaches </button>
-      <button class="bg-[rgb(255,107,0)] hover:bg-primary-dark text-white px-6 py-3 rounded-lg text-sm font-extrabold transition-all active:scale-95 shadow-md">Student </button>
-      <button type="button" id="nav-open-btn" class="flex items-center justify-center size-11 rounded-full bg-neutral-light hover:bg-primary-light text-neutral-dark hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Open menu" aria-controls="nav-overlay" aria-expanded="false">
+      <button class="hidden sm:block text-sm font-bold text-neutral-dark px-4 hover:text-[rgb(255,107,0)] transition-colors">Coaches </button>
+      <button class="bg-[rgb(255,107,0)] hover:bg-[rgb(255,107,0,0.8)] text-white px-6 py-3 rounded-lg text-sm font-extrabold transition-all active:scale-95 shadow-md">Student </button>
+      <button type="button" id="nav-open-btn" class="flex items-center justify-center size-11 rounded-full bg-neutral-light hover:bg-[rgb(255,107,0)] text-neutral-dark hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Open menu" aria-controls="nav-overlay" aria-expanded="false">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
     </div>
+
   </div>
 </header>
